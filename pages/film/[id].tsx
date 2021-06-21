@@ -80,17 +80,19 @@ async getVehicles() {
     const vehicles: any =  this.state.vehicles;
     return (
       <div>
-          <Link href="/">Go back</Link>
-          <h1 className="header">{film.title}</h1>
-          <p><b>Opening Crawl:</b> {film.opening_crawl}</p>
-          <p><b>Release Date:</b> {film.release_date}</p>
-          <p><b>Director:</b> {film.director}</p>
-          <p><b>Producer:</b> {film.producer}</p>
+          <head><title>{film.title}</title></head>
+          <Link href="/"><p className="sText">Go back</p></Link>
+          <h1 className="heading">{film.title}</h1>
+          <p className="sText"><b>Opening Crawl:</b> {film.opening_crawl}</p>
+          <p className="sText"><b>Release Date:</b> {film.release_date}</p>
+          <p className="sText"><b>Director:</b> {film.director}</p>
+          <p className="sText"><b>Producer:</b> {film.producer}</p>
           <div className="list title">
-              <b>Characters</b>
+              <p className="sText">Characters</p>
               {characters.length !== 0 && <div className="topBorder" />}
               {characters.map((character: any, i: number) => {
                   return <div className="listItem" data-tip={`
+                      ${character.name}<br>
                       Birth Year: ${character.birth_year}<br>
                       Eye Colour: ${character.eye_color}<br>
                       Gender: ${character.gender}<br>
@@ -102,10 +104,11 @@ async getVehicles() {
               })}
           </div>
           <div className="list title">
-            <b>Planets</b>
+            <p className="sText">Planets</p>
             {planets.length !== 0 && <div className="topBorder" />}
             {planets.map((planet: any, i: number) => {
                 return <div className="listItem" data-tip={`
+                    ${planet.name}<br>
                     Diameter: ${planet.diameter}<br> 
                     Gravity: ${planet.gravity}<br> 
                     Orbital Period: ${planet.orbital_period}<br> 
@@ -118,10 +121,11 @@ async getVehicles() {
             })}
           </div>
           <div className="list title">
-            <b>Species</b>
+            <p className="sText">Species</p>
             {species.length !== 0 && <div className="topBorder" />}
             {species.map((specie: any, i: number) => {
                 return <div className="listItem" data-tip={`
+                    ${specie.name}<br>
                     Average Height: ${specie.average_height}<br> 
                     Average Lifespan: ${specie.average_lifespan}<br> 
                     Classification: ${specie.classification}<br> 
@@ -134,10 +138,11 @@ async getVehicles() {
             })}
           </div>
           <div className="list title">
-            <b>Starships</b>
+            <p className="sText">Starships</p>
             {starships.length !== 0 && <div className="topBorder" />}
             {starships.map((starship: any, i: number) => {
                 return <div className="listItem" data-tip={`
+                    ${starship.name}<br>
                     MGLT: ${starship.MGLT}<br>
                     Cargo Capacity: ${starship.cargo_capacity}<br>
                     Consumables: ${starship.consumables}<br>
@@ -154,10 +159,11 @@ async getVehicles() {
             })}
           </div>
           <div className="list title">
-            <b>Vehicles</b>
+            <p className="sText">Vehicles</p>
             {vehicles.length !== 0 && <div className="topBorder" />}
             {vehicles.map((vehicle: any, i: number) => {
                 return <div className="listItem" data-tip={`
+                    ${vehicle.name}<br>
                     Cargo Capacity: ${vehicle.cargo_capacity}<br>
                     Consumables: ${vehicle.consumables}<br>
                     Cost In Credits: ${vehicle.cost_in_credits}<br>

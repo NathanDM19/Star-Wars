@@ -39,6 +39,7 @@ class Home extends Component {
   render() {
     return (
       <div>
+        <head><title>Star Wars Films</title></head>
         <h1 className="heading">Star Wars Films</h1>
         <input className="search" type="text" id="search" name="search" placeholder="Search for a movie" onChange={a => this.setState({search: a.currentTarget.value})}></input>
         {this.state.films.length !== 0 && <div className="topBorder"></div>}
