@@ -1,13 +1,13 @@
 import { useRouter } from 'next/router'
 
-function Link({ children, href }) {
+function Link({ children, href }: any) {
   const router = useRouter()
   const style = {
     marginRight: 10,
     color: router.asPath === href ? 'red' : 'black',
   }
 
-  const handleClick = (e) => {
+  const handleClick = (e: any) => {
     e.preventDefault()
     router.push(href)
   }
